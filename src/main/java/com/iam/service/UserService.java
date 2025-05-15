@@ -1,7 +1,7 @@
-package com.example.service;
+package com.iam.service;
 
-import com.example.dao.UserDao;
-import com.example.model.User;
+import com.iam.dao.UserDao;
+import com.iam.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -21,7 +21,14 @@ public class UserService {
         userDao.save(user);
         return user;
     }
+    public User updateUser(User user){
+        userDao.save(user);
+        return user;
+    }
     public User getUserByUserName(String userName){
         return userDao.findByUserName(userName);
+    }
+    public User getUserById(Long id){
+        return userDao.findById(id).orElse(null);
     }
 }

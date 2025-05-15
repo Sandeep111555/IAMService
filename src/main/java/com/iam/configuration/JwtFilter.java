@@ -1,6 +1,6 @@
-package com.example.configuration;
-import com.example.service.JwtService;
-import com.example.service.MyUserDetailsService;
+package com.iam.configuration;
+import com.iam.service.JwtService;
+import com.iam.service.MyUserDetailsService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

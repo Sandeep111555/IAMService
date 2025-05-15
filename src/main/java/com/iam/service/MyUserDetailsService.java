@@ -1,7 +1,7 @@
-package com.example.service;
-import com.example.dao.UserDao;
-import com.example.model.UserPrinciple;
-import com.example.model.User;
+package com.iam.service;
+import com.iam.dao.UserDao;
+import com.iam.model.UserPrinciple;
+import com.iam.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

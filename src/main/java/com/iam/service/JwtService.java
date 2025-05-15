@@ -1,6 +1,6 @@
-package com.example.service;
+package com.iam.service;
 
-import com.example.model.User;
+import com.iam.model.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -30,6 +30,7 @@ public class JwtService {
     //Generate JWT token using User object
     public String generateToken(User user){
         Map<String,String> claims = new HashMap<>();
+        claims.put("id",String.valueOf(user.getId()));
         claims.put("firstName",user.getFirstName());
         claims.put("lastName",user.getLastName());
         return Jwts.builder()
